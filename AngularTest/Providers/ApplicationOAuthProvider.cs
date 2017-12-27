@@ -19,6 +19,7 @@ namespace AngularTest.Providers
 
         public ApplicationOAuthProvider(string publicClientId)
         {
+        {
             if (publicClientId == null)
             {
                 throw new ArgumentNullException("publicClientId");
@@ -26,6 +27,7 @@ namespace AngularTest.Providers
 
             _publicClientId = publicClientId;
         }
+    }
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
